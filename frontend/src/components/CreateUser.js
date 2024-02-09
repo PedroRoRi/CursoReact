@@ -5,6 +5,7 @@ export default class CreateUser extends Component {
   state = {
     users: [],
     username: "",
+    message: "",
   };
 
   async componentDidMount() {
