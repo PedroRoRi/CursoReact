@@ -20,10 +20,9 @@ export default class CreateNote extends Component {
       users: res.data.map((user) => user.username),
       userSelected: res.data[0].username,
     });
-
+    /**Validacion de parametro Id */
     if (this.props && this.props.params) {
       const idNote = this.props.params.id;
-      console.log(idNote);
 
       if (idNote) {
         const res = await axios.get(
@@ -118,6 +117,7 @@ export default class CreateNote extends Component {
             <DatePicker
               className="form-control"
               selected={this.state.fecha}
+              name="fecha"
               onChange={this.onChangeDate}
             ></DatePicker>
           </div>
